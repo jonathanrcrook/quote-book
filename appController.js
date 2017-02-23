@@ -4,6 +4,8 @@ angular.module('quoteBook').controller('appController', function($scope, mainSer
   $scope.quotes = mainService.getQuotes()
   $scope.addData = function(quote) {
     mainService.addData(quote)
+    // $scope.quotes = mainService.getQuotes();
+    $scope.addedData = {text: "", author: ""}
   }
 
   $scope.removeData = function(str) {

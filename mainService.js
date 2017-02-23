@@ -5,7 +5,11 @@ this.getQuotes = function() {
 }
 
 this.addData = function(obj) {
-  quotes.push(obj);
+  if (obj.text) {
+      quotes.push(obj);
+  } else {
+    alert('Please enter quote')
+  }
 }
 
 this.removeData = function(str) {
